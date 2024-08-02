@@ -15,7 +15,6 @@ El objetivo de este proyecto es aprender y desarrollar un sistema de gestión ho
 
 - **Java:** Lenguaje de programación principal.
 - **Quarkus:** Framework principal para el desarrollo de microservicios.
-- **JPA/Hibernate:** Gestión de la base de datos y entidades.
 - **Panache:** Simplificación del acceso a la base de datos utilizando el patrón Active Record.
 - **MicroProfile:** Proporciona herramientas para la creación y conexión de microservicios, incluyendo métricas, autenticación, health checks, tolerancia a fallos y comunicación con clientes REST.
 - **MongoDB:** Motor de base de datos.

@@ -1,0 +1,53 @@
+DijkstraIntervalos(G, s)
+Inicializar
+    for cada v perteneciente a V[G]
+        d[v] = (infinito, infinito)  # Intervalo inicial [∞, ∞]
+        p[v] = nulo
+    d[s] = (0, 0)  # Intervalo inicial [0, 0] para el nodo de inicio
+
+S = vacio
+Q = V[G]
+mientras Q no vacio
+    u = nodo con el intervalo más pequeño según los criterios de aceptación en Q
+    Q = Q - {u}
+    S = S unión {u}
+
+    for cada v perteneciente Adyacente(u)
+        Relajación
+        nuevo_intervalo = (d[u][0] + w(u, v)[0], d[u][1] + w(u, v)[1])
+        if compararIntervalos(nuevo_intervalo, d[v]) < 0
+            d[v] = nuevo_intervalo
+            p[v] = u
+
+return d, p
+
+# Función para comparar intervalos según los criterios de aceptación
+compararIntervalos(intervalo1, intervalo2)
+    count1 = 0
+    count2 = 0
+
+    if (intervalo1 == intervalo2)
+        return intervalo1  # El intervalo de la izquierda tiene prioridad
+
+    if (intervalo1[0] < intervalo2[0])
+        count1++
+    else 
+        count2++
+    
+    if (intervalo1[1] < intervalo2[1])
+        count1++
+    else 
+        count2++
+    
+    if (count1 == count2)
+        diferencia1 = intervalo1[1] - intervalo1[0]
+        diferencia2 = intervalo2[1] - intervalo2[0]
+        if (diferencia1 < diferencia2)
+            return intervalo1
+        else 
+            return intervalo2
+
+    if (count1 > count2)
+        return intervalo1
+    else 
+        return intervalo2
