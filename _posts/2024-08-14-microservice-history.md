@@ -1,6 +1,6 @@
 ---
 title : "Microservice History Medical"
-date : 2024-08-02
+date : 2024-08-14
 categories : [Api Clínica HealHub]
 tags: [Backend,Quarkus,Java,Microservices,RestApi,Swagger,HealthCheck,Metrics]
 ---
@@ -48,6 +48,6 @@ Nuestros endpoints más utilizados en el microservicio serían los siguientes:
 Los endpoints más utilizados serían para obtener la lista de historiales de pacientes y médicos, ya que es común que los pacientes revisen sus recetas o notas pasadas, y que los médicos revisen el historial de un paciente.
 
 
-[imagenPost](/assets/image/posthistorymicroservice/post.png)
+![imagenPost](/assets/image/posthistorymicroservice/post.png)
 
 Y el metodo para crear el medico que este se estara comunicandoo con el microservicio medico utilizando las espeficicancion de Rest Client de Microprofile.
