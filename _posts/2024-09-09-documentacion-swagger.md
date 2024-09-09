@@ -1,6 +1,6 @@
 ---
 title : "Documentar Apis en Quarkus"
-date : 2024-09-08
+date : 2024-09-09
 categories : [Quarkus Magi]
 tags: [Backend,Quarkus,Java,Swagger,OpenApi]
 ---
